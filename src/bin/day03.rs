@@ -75,12 +75,12 @@ fn all_lines_equal_length() {
 #[test]
 fn test_index() {
     let map = init();
-    assert!(map[0].row[0] == false);
-    assert!(map[0][0] == false);
-    assert!(map[0][12] == true);
+    assert!(!map[0].row[0]);
+    assert!(!map[0][0]);
+    assert!(map[0][12]);
     let len_first_row = map[0].row.len();
-    assert!(map[0][len_first_row] == false);
-    assert!(map[0][len_first_row + 12] == true);	
+    assert!(!map[0][len_first_row]);
+    assert!(map[0][len_first_row + 12]);
 }
 
 #[test]
