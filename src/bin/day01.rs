@@ -1,7 +1,5 @@
 use std::fs::File;
 use std::io::{BufReader, BufRead};
-use std::io;
-use std::io::prelude::*;
 
 fn main() {
     let file = File::open("./data/01").unwrap();
@@ -12,7 +10,7 @@ fn main() {
     println!("Answer 2: {}", star_two(&numbers).unwrap());
 }
 
-fn star_one(numbers: &Vec<i32>) -> Result<i32, &'static str> {
+fn star_one(numbers: &[i32]) -> Result<i32, &'static str> {
     for number_1 in &*numbers {
 	for number_2 in &*numbers {
 	    if number_1 + number_2 == 2020 {
@@ -23,7 +21,7 @@ fn star_one(numbers: &Vec<i32>) -> Result<i32, &'static str> {
     Err("Combination not found")
 }
 
-fn star_two(numbers: &Vec<i32>) -> Result<i32, &'static str> {
+fn star_two(numbers: &[i32]) -> Result<i32, &'static str> {
     for number_1 in &*numbers {
 	for number_2 in &*numbers {
 	    for number_3 in &*numbers {
