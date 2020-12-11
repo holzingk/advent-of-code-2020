@@ -123,10 +123,10 @@ fn sample_test_second1() {
     
     assert_eq!(ranges[0], [0, 1, 4]);
     assert_eq!(ranges[1], [4, 5, 6, 7, 10]);
-    assert_eq!(check_range(&vec![2, 4, 7]), true);
-    assert_eq!(check_range(&vec![2, 4, 8]), false);
-    assert_eq!(find_valid_combos(&vec![3, 4, 6, 8]), 2);
-    assert_eq!(find_valid_combos(&vec![3, 5, 6, 7, 9]), 5);
+    assert_eq!(check_range(&[2, 4, 7]), true);
+    assert_eq!(check_range(&[2, 4, 8]), false);
+    assert_eq!(find_valid_combos(&[3, 4, 6, 8]), 2);
+    assert_eq!(find_valid_combos(&[3, 5, 6, 7, 9]), 5);
 
     assert_eq!(process_in_groups(&ranges), 8);
 }
